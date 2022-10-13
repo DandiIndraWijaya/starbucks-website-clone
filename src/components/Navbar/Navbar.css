@@ -1,0 +1,96 @@
+.navbar-container {
+  height: 101px;
+  box-shadow: 0 1px 3px rgba(104, 99, 99, 0.4);
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.navbar-left{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  height: 100%;
+}
+
+.navbar-logo-container{
+  width: 80px;
+}
+
+.starbucks-logo{
+  width: 50px;
+  height: 50px;
+}
+
+.navbar-link {
+  padding: 0 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-link:hover {
+  color: #00754a;
+}
+
+.navbar-right {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.find-store {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.find-store .text {
+  margin-left: 8px;
+  font-size: 15px;
+}
+
+.find-store:hover {
+  fill: #00754a;
+  color: #00754a;
+}
+
+.sign-in, .join-now{
+  margin-left: 15px;
+  border-radius: 18px;
+  font-weight: 600;
+  padding: 7px 15px;
+  font-size: 15px;
+}
+
+
+.join-now, .sign-in {
+  cursor: pointer;
+  transition: background-color 100ms;
+}
+
+.join-now{
+  background-color: black;
+  color: white;
+}
+
+.join-now:hover {
+  background-color: rgb(78, 76, 76);
+}
+
+.sign-in{
+  border: 1px solid black;
+  font-weight: 500;
+  background-color: inherit;
+}
+
+.sign-in:hover {
+  background-color: rgba(104, 99, 99, 0.2);
+}
