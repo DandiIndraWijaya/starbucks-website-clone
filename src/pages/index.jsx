@@ -9,7 +9,7 @@ const Home = () => {
 
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
         <main id="home-main">
           <Content 
             image="https://content-prod-live.cert.starbucks.com/binary/v2/asset/137-81069.jpg" 
@@ -25,7 +25,7 @@ const Home = () => {
             description="We care deeply about coffee farmers and their communities. Your support helps us invest in the well-being of farmers across the world’s coffee-growing regions."
             buttonText="Learn more"
           />
-        <Content 
+          <Content 
             image="https://content-prod-live.cert.starbucks.com/binary/v2/asset/137-79284.jpg"
             type={3}
             title="The art of the roast"
@@ -57,7 +57,8 @@ const Home = () => {
             buttonText="Learn more"
           />
         </main>
-      <Footer />
+        <div className="divider"></div>
+      {/* <Footer /> */}
     </div>
   )
 }
