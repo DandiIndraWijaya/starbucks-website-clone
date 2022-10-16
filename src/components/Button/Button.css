@@ -1,0 +1,86 @@
+#sidebar-button {
+  background-color: unset;
+  border: unset;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+}
+
+.sidebar-button-icon-bg {
+  background-color: inherit;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  transition: 300ms;
+}
+
+#sidebar-button:hover .sidebar-button-icon-bg {
+  width: 38px;
+  height: 38px;
+  background-color: rgba(187, 174, 174, 0.2);
+}
+
+#nav-icon {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: 150ms ease-in-out;
+  background: inherit;
+  border: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#nav-icon span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width:100%;
+  background: #676666;
+  opacity: 1;
+  transform: rotate(0deg);
+  transition: 150ms ease-in-out;
+}
+
+#nav-icon span:nth-child(1) {
+  top: 4px;
+  transition-delay: 200ms;
+}
+
+#nav-icon span:nth-child(2) {
+  top: 10px;
+}
+
+#nav-icon span:nth-child(3) {
+  top: 16px;
+  transition-delay: 200ms;
+}
+
+#nav-icon.open span:nth-child(1), #nav-icon.open span:nth-child(3){
+  top: 10px;
+  transition-delay: 0ms;
+}
+
+#nav-icon.open span:nth-child(1){
+  background: inherit;
+}
+
+#nav-icon.open span:nth-child(2){
+  transform: rotate(90deg);
+  transition-delay: 200ms;
+}
+
+#nav-icon.open {
+  transform: rotate(45deg);
+  transition-delay: 200ms;
+}

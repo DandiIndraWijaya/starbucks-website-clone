@@ -9,7 +9,7 @@ const Home = () => {
 
   return (
     <div>
-      {/* <Navbar /> */}
+      <Navbar />
         <main id="home-main">
           <Content 
             image="https://content-prod-live.cert.starbucks.com/binary/v2/asset/137-81069.jpg" 
