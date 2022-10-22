@@ -1,13 +1,20 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react"
+import React, { useState } from "react"
 import './Navbar.css'
 import { useMediaQuery } from 'react-responsive'
+import Sidebar from "../Sidebar"
 import Button from "../Button"
 
 const Navbar = () => {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 790px)' })
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+
+  const toggleSidebarButton = () => {
+    setIsSidebarOpen(!isSidebarOpen)
+  }
 
   return (
+    <>
     <div id="navbar">
       <div className="navbar-container">
         <div className="navbar-left">
@@ -45,12 +52,17 @@ const Navbar = () => {
                     Join now
                   </div>
                 </>:
-                <Button type="sidebar" />
+                <Button 
+                  isSidebarOpen={isSidebarOpen}
+                  toggleSidebarButton={toggleSidebarButton}
+                  type="sidebar" 
+                />
               }
             </div>
       </div>
-      <div className="divider"></div>
     </div>
+    <Sidebar isOpen={isSidebarOpen} />
+    </>
   )
 }
 

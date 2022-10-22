@@ -1,13 +1,8 @@
-import React, { useState } from "react"
+import React from "react"
 import './Button.css'
 
 const Button = (props) => {
-  const { type } = props
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
-
-  const toggleSidebarButton = () => {
-    setIsSidebarOpen(!isSidebarOpen)
-  }
+  const { type, isSidebarOpen, toggleSidebarButton } = props
 
   if(type === 'sidebar'){
     return (
