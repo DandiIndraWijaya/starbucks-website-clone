@@ -12,16 +12,57 @@
   background-color: rgb(97, 89, 89, 0.5);
 }
 
+#blank-sidebar {
+  width: 20%;
+  height: 100%;
+}
 
-.sidebar-items-container {
+.sidebar-items {
   background-color: white;
   height: 100%;
   width: 80%;
   position: absolute;
-  transition: right 0.3s linear;
+  transition: right 0.3s ease-in;
   right: -100%;
+}
+
+.sidebar-items-container {
+  padding: 35px 30px;
+}
+
+.sidebar-link {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  cursor: pointer;
+}
+
+.sidebar-link:nth-child(3) {
+  margin-bottom: 15px;
+}
+
+.sidebar-link-title {
+  flex-grow: 1;
 }
 
 .sidebar-open {
   right: 0;
+}
+
+.sidebar-sign-button-container{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.sidebar-sign-button{
+  margin-left: 0;
+  font-weight: 600;
+}
+
+.sidebar-join-button {
+  border: unset;
 }
