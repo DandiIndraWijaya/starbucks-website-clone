@@ -1,8 +1,35 @@
-import React from "react"
+import React, { useEffect } from "react"
 import "./Footer.css"
 import { services, socialMedia } from "./footerData"
+import { useMediaQuery } from 'react-responsive'
+import Chevron from "../../icons/chevron"
 
 const Footer = () => {
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1023px)' })
+
+  const onClickService = (index) => {
+    if(isTabletOrMobile){
+      const chevron =  document.getElementsByClassName('footer-chevron')
+      const serviceItemContainer = document.getElementsByClassName('footer-service-item-container')
+      if(serviceItemContainer[index].style.height === '0px'){
+        serviceItemContainer[index].style.height = serviceItemContainer[index].scrollHeight + 'px'
+        chevron[index].style.transform = 'rotate(180deg)'
+      }else {
+        serviceItemContainer[index].style.height =  0
+        chevron[index].style.transform = 'unset'
+      }
+    }
+  }
+
+  useEffect(() => {
+   if(isTabletOrMobile){
+    const serviceItemContainer = document.getElementsByClassName('footer-service-item-container')
+    for(let i = 0; i < serviceItemContainer.length; i += 1){
+      serviceItemContainer[i].style.height =  0
+    }
+   }
+  })
+
   return (
     <div id="footer">
       <div className="footer-services">
@@ -10,10 +37,15 @@ const Footer = () => {
         services.map((service, key) => {
           return (
             <div className="footer-service">
-              <div className="footer-service-title">
-                {service.title}
+              <div onClick={() => onClickService(key)} className="footer-service-title-container">
+                <div className="footer-service-title">{service.title}</div>
+                {
+                  isTabletOrMobile && <Chevron className="footer-chevron" style={{ width: 32, height: 32}} />
+                }
               </div>
-              {
+              <div className="footer-service-item-container">
+             <div className="footer-service-item-container-absolute">
+             {
                 service.items.map((item, key) => {
                   return (
                     <div className="footer-service-item text-grey">
@@ -22,6 +54,8 @@ const Footer = () => {
                   )
                 })
               }
+             </div>
+              </div>
             </div>
           )
         })

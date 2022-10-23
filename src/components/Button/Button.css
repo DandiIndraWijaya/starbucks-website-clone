@@ -84,3 +84,9 @@
   transform: rotate(45deg);
   transition-delay: 200ms;
 }
+
+@media only screen and (max-width: 790px) {
+  #sidebar-button:hover .sidebar-button-icon-bg {
+    background-color: unset;
+  }
+}

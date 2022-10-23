@@ -58,7 +58,7 @@ const Home = () => {
           />
         </main>
         <div className="divider"></div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   )
 }

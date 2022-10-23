@@ -6,14 +6,14 @@ const Button = (props) => {
 
   if(type === 'sidebar'){
     return (
-      <button onClick={toggleSidebarButton} id="sidebar-button">
+      <div onClick={toggleSidebarButton} id="sidebar-button">
         <div className="sidebar-button-icon-bg"></div>
         <div id="nav-icon" className={isSidebarOpen ? 'open' : ''}>
           <span></span>
           <span></span>
           <span></span>
         </div>
-      </button>
+      </div>
     )
   }
 
